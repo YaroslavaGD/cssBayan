@@ -155,6 +155,15 @@ input[type="radio"] {
   background-image: url(../assets/svg/wolf-active.svg);
 }
 
+.creator {
+  text-align: right;
+  padding: 1em;
+}
+
+.creator__link {
+  color: #585858;
+}
+
 @media (min-width: 768px) {
   .accordion__header {
     font-size: 1.5rem;
