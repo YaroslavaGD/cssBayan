@@ -36,17 +36,16 @@ input[type="radio"] {
   border: none;
   margin: 0;
   padding: 0;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   /* -webkit-box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(105,105,105,0); 
   box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(105,105,105,0); */
 }
 
 .accordion__item {
+  display: flex;
   overflow: hidden;
   cursor: pointer;
-}
-
-.accordion__header {
-
 }
 
 .accordion__item--1 {
@@ -72,6 +71,7 @@ input[type="radio"] {
 .accordion__container {
   display: flex;
   flex-direction: column;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -79,6 +79,7 @@ input[type="radio"] {
   display: flex;
   justify-content: space-between;
   padding: 0.625rem;
+  z-index: 1000;
 }
 
 .accordion__title {
@@ -110,31 +111,88 @@ input[type="radio"] {
 
 .accordion__body {
   display: block;
-  /* width: 100%; */
   max-height: 0;
-  /* opacity: 0%; */
-  -webkit-transition:  max-height 1s cubic-bezier(.65,0,.35,1);
-	-o-transition:  max-height 1s cubic-bezier(.65,0,.35,1);
-  transition: max-height 1s cubic-bezier(.65,0,.35,1);
+  overflow: hidden;
+  scale: 0.5;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition:  all 0.6s cubic-bezier(.65,0,.35,1);
+	-o-transition:  all 0.6s cubic-bezier(.65,0,.35,1);
+  transition: all 0.6s cubic-bezier(.65,0,.35,1);
 }
 
 .accordion__item:has(.accordion__radio:checked) .accordion__body {
+  opacity: 1;
+  scale: 1;
   max-height: 90em;
 }
-
-
 
 .accordion__img {
   width: 100%;
   height: auto;
   margin: 0 auto;
   opacity: 0.8;
-  filter: grayscale(90%);
+}
+
+.accordion__img-main {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.accordion__container:active .accordion__img{
+  opacity: 0.7;
+}
+
+.accordion__item:has(.accordion__radio:checked) .accordion__container:active  .accordion__title,
+.accordion__container:active  .accordion__title {
+  color: #972626;
+}
+
+.accordion__container:active .accordion__icon,
+.accordion__item:has(.accordion__radio:checked) .accordion__container:active .accordion__icon {
+  background-image: url(../assets/svg/wolf-active.svg);
+}
+
+@media (min-width: 768px) {
+  .accordion__header {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 820px) {
+  .accordion__img {
+    display: block;
+    width: 21.875rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  .accordion__header {
+    font-size: 1.5rem;
+  }
+
+  .accordion__img {
+    display: block;
+    width: 43.75rem;
+    margin: 0 auto;
+    margin-bottom: 3rem; 
+
+    transition: all 0.3s;
+  }
+}
+
+@media (min-width: 1440px) {
   .container {
-    padding: 5% 10% 0;
+    padding: 4.5rem 15rem 0;
+  }
+
+  .main-text {
+    font-size: 4rem;
+    margin: 0 0 1em;
+    line-height: 1em;
+    padding-left: 1.5rem;
   }
 
   .accordion {
@@ -143,10 +201,10 @@ input[type="radio"] {
 
   .accordion__header {
     display: flex;
-    font-size: 1.5rem;
+    font-size: 2rem;
     justify-content: space-between;
     font-weight: 400;
-    padding: 1.15rem;
+    padding: 1.15rem 1.5rem;
   }
 
   .accordion__title {
@@ -158,11 +216,61 @@ input[type="radio"] {
 
   .accordion__img {
     display: block;
-    width: 50.6%;
-    height: auto;
+    width: 43.75rem;
     margin: 0 auto;
-    opacity: 0.8;
-    filter: grayscale(90%);
     margin-bottom: 3rem; 
+
+    transition: all 0.3s;
+  }
+
+  .accordion__icon {
+    opacity: 0;
+  }
+
+  .accordion:hover .accordion__icon {
+    opacity: 1;
+  }
+
+  .accordion__item:hover .accordion__icon {
+    transform: rotateZ(45deg);
+    background-image: url(../assets/svg/wolf.svg);
+  }
+
+  .accordion__title,
+  .accordion__item:has(.accordion__radio:checked) .accordion__title {
+    color: #972626;
+  }
+
+
+  .accordion__item:has(.accordion__radio:checked) .accordion__title {
+    color: #303030;
+  }
+
+  .accordion:hover .accordion__title {
+    color: #585858;
+  }
+
+  .accordion:hover .accordion__item:has(.accordion__radio:checked) .accordion__title {
+    color: #303030;
+  }
+
+  .accordion__item:hover .accordion__body {
+    opacity: 1;
+    scale: 1;
+    max-height: 90em;
+  }
+
+  .accordion__container:active .accordion__img{
+    opacity: 0.7;
+  }
+  
+  .accordion__item:has(.accordion__radio:checked) .accordion__container:active  .accordion__title,
+  .accordion__container:active  .accordion__title {
+    color: #972626;
+  }
+
+  .accordion__container:active .accordion__icon,
+  .accordion__item:has(.accordion__radio:checked) .accordion__container:active .accordion__icon {
+    background-image: url(../assets/svg/wolf-active.svg);
   }
 }
