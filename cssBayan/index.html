@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="assets/favicon.svg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>cssBayan</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-text">CSS Bayan</h1>
+    <fieldset class="accordion">
+      <div class="accordion__item accordion__item--1">
+        <label class="accordion__container" for="meme1">
+          <span class="accordion__header accordion__item--1">
+            <span class="accordion__title">Так дела не делаются</span>
+            <span class="accordion__icon"></span>
+          </span>
+          <span class="accordion__body">
+            <picture class="accordion__img">
+              <source media="(max-width: 819px)" srcset="assets/img/1_w350.jpg" />
+              <source media="(min-width: 820px)" srcset="assets/img/1.jpg" />
+              <img class="accordion__img-main" src="assets/img/1.jpg" alt="1 meme" />
+            </picture>
+          </span>
+
+        </label>
+        <input class="accordion__radio" type="radio" name="accordion-item" id="meme1" checked>
+      </div>
+
+      <div class="accordion__item accordion__item--2">
+        <input class="accordion__radio" type="radio" name="accordion-item" id="meme2">
+        <label class="accordion__container" for="meme2">
+          <span class="accordion__header accordion__item--2">
+            <span class="accordion__title">Не тот силен</span>
+            <span class="accordion__icon"></span>
+          </span>
+          <span class="accordion__body">            
+            <picture class="accordion__img">
+              <source media="(max-width: 819px)" srcset="assets/img/2_w350.jpg" />
+              <source media="(min-width: 820px)" srcset="assets/img/2.jpg" />
+              <img class="accordion__img-main" src="assets/img/2.jpg" alt="2 meme" />
+            </picture>
+          </span>
+        </label>
+      </div>
+
+      <div class="accordion__item accordion__item--3">
+        <input class="accordion__radio" type="radio" name="accordion-item" id="meme3">
+        <label class="accordion__container" for="meme3">
+          <span class="accordion__header accordion__item--3">
+            <span class="accordion__title">Сделал дело</span>
+            <span class="accordion__icon"></span>
+          </span>
+          <span class="accordion__body">            
+            <picture class="accordion__img">
+              <source media="(max-width: 819px)" srcset="assets/img/3_w350.jpg" />
+              <source media="(min-width: 820px)" srcset="assets/img/3.jpg" />
+              <img class="accordion__img-main" src="assets/img/3.jpg" alt="3 meme" />
+            </picture>
+          </span>
+        </label>
+      </div>
+
+      <div class="accordion__item accordion__item--4">
+        <input class="accordion__radio" type="radio" name="accordion-item" id="meme4">
+        <label class="accordion__container" for="meme4">
+          <span class="accordion__header accordion__item--4">
+            <span class="accordion__title">Не стоит волка искать там</span>
+            <span class="accordion__icon"></span>
+          </span>
+          <span class="accordion__body">            
+            <picture class="accordion__img">
+              <source media="(max-width: 819px)" srcset="assets/img/4_w350.jpg" />
+              <source media="(min-width: 820px)" srcset="assets/img/4.jpg" />
+              <img class="accordion__img-main" src="assets/img/4.jpg" alt="4 meme" />
+            </picture>
+          </span>
+        </label>
+      </div>
+
+      <div class="accordion__item accordion__item--5">
+        <input class="accordion__radio" type="radio" name="accordion-item" id="meme5">
+        <label class="accordion__container" for="meme5">
+          <span class="accordion__header accordion__item--5">
+            <span class="accordion__title">Как бы сейчас</span>
+            <span class="accordion__icon"></span>
+          </span>
+          <span class="accordion__body">            
+            <picture class="accordion__img">
+              <source media="(max-width: 819px)" srcset="assets/img/5_w350.jpg" />
+              <source media="(min-width: 820px)" srcset="assets/img/5.jpg" />
+              <img class="accordion__img-main" src="assets/img/5.jpg" alt="5 meme" />
+            </picture>
+          </span>
+        </label>
+    </div>
+    </fieldset>
+  </div>
+
+  <footer class="creator">
+    <a class="creator__link" href="https://rs.school/js/" rel="noreferrer nofollow" target="_blank" title="Rolling Scopes School">Rolling Scopes School</a>
+    <div>
+      <span class="creator__year">© 2022</span>
+      <a class="creator__link" href="https://github.com/YaroslavaGD" rel="noreferrer nofollow" target="_blank" title="My Github">YaroslavaGD</a>
+    </div>
+  </footer>
+</body>
+</html>
