@@ -36,10 +36,8 @@ input[type="radio"] {
   border: none;
   margin: 0;
   padding: 0;
-  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  /* -webkit-box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(105,105,105,0); 
-  box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(105,105,105,0); */
+  box-shadow: rgba(50, 50, 93, 0.25) 0rem 0.813rem 1.688rem -0.313rem, rgba(0, 0, 0, 0.3) 0rem 0.5rem 1rem -0.5rem;
+
 }
 
 .accordion__item {
